@@ -85,20 +85,27 @@ const StyledTab = styled(Tab)`
   border-bottom: 3px solid #ffffff;
 `;
 
+const AccountButton = styled("div") `
+  display: inline-block;
+`;
+
 export default () => {
   const [tabIndex, setTabIndex] = useState(0);
-
+  console.log(Auth.user)
   return (
-    <>
+    <div>
       <Header>
-        <Title>Quick Notes</Title>
-        <SignOutButton
-          onClick={() => {
-            Auth.signOut().then(() => window.location.reload());
-          }}
-        >
-          Sign Out
-        </SignOutButton>
+        <Title>Let's Hangout</Title>
+        <div>
+          <AccountButton>{Auth.user.attributes.email}</AccountButton>
+          <SignOutButton
+            onClick={() => {
+              Auth.signOut().then(() => window.location.reload());
+            }}
+          >
+            Sign Out
+          </SignOutButton>
+        </div>  
       </Header>
       <StyledTabs index={tabIndex} onChange={index => setTabIndex(index)}>
         <StyledTabList>
@@ -114,6 +121,6 @@ export default () => {
           </StyledTabPanel>
         </StyledTabPanels>
       </StyledTabs>
-    </>
+    </div>
   );
 };

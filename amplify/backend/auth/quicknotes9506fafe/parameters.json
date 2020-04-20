@@ -1,6 +1,6 @@
 {
     "identityPoolName": "quicknotes9506fafe_identitypool_9506fafe",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "quickn9506fafe",
     "userPoolName": "quicknotes9506fafe_userpool_9506fafe",
     "autoVerifiedAttributes": [
@@ -44,14 +44,29 @@
             "Arn"
         ]
     },
-    "useDefault": "default",
+    "useDefault": "manual",
     "usernameAttributes": [
         "email"
     ],
-    "triggers": "{}",
+    "triggers": "{\"PreSignup\":[\"custom\"]}",
     "parentStack": {
         "Ref": "AWS::StackId"
     },
     "permissions": [],
-    "dependsOn": []
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "quicknotes9506fafePreSignup",
+            "triggerProvider": "Cognito",
+            "attributes": [
+                "Arn",
+                "Name"
+            ]
+        }
+    ],
+    "thirdPartyAuth": false,
+    "userPoolGroups": false,
+    "adminQueries": false,
+    "hostedUI": false,
+    "userPoolGroupList": []
 }

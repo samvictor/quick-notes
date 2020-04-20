@@ -1,0 +1,23 @@
+{
+    "hangfour": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-quick-notes-hangfour-134626-authRole",
+            "UnauthRoleArn": "arn:aws:iam::959381368864:role/amplify-quick-notes-hangfour-134626-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::959381368864:role/amplify-quick-notes-hangfour-134626-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-quick-notes-hangfour-134626-deployment",
+            "UnauthRoleName": "amplify-quick-notes-hangfour-134626-unauthRole",
+            "StackName": "amplify-quick-notes-hangfour-134626",
+            "StackId": "arn:aws:cloudformation:us-east-1:959381368864:stack/amplify-quick-notes-hangfour-134626/d5ef54e0-80b1-11ea-9673-0aff04b5e65f",
+            "AmplifyAppId": "d1dwxlh4fv3126"
+        },
+        "categories": {
+            "auth": {
+                "quicknotes9506fafe": {}
+            },
+            "function": {
+                "quicknotes9506fafePreSignup": {}
+            }
+        }
+    }
+}
